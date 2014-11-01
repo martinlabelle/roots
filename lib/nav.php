@@ -10,6 +10,10 @@
  *   <li class="menu-home"><a href="/">Home</a></li>
  *   <li class="menu-sample-page"><a href="/sample-page/">Sample Page</a></li>
  */
+
+/*FIXME The Roots menu does not drop down when ihomefinder's optima express is enabled, possibly this is
+do to a roots loading the jQuery global variable, or a simple botch up in the optima express plugin
+ */
 class Roots_Nav_Walker extends Walker_Nav_Menu {
   function check_current($classes) {
     return preg_match('/(current[-_])|active|dropdown/', $classes);
